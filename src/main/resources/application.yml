@@ -1,0 +1,24 @@
+server:
+    port: 8088
+
+spring:
+    datasource:
+      # DOCKER
+      #  url: jdbc:mysql://172.17.0.2:3306/dbcarros?createDatabaseIfNotExist=true&autoReconnect=true&useSSL=false
+      #  username: root
+      #  password: 123456
+      # KUBERNETES
+        url: jdbc:mysql://db-mysql:3306/dbcarros?createDatabaseIfNotExist=true&autoReconnect=true&useSSL=false
+        username: root
+        password: 123456
+        testWhileIdle: true
+        validationQuery: SELECT 1
+
+    jpa:
+        show-sql: true
+        hibernate:
+            ddl-auto: update
+            naming-strategy: org.hibernate.cfg.ImprovedNamingStrategy
+        properties:
+            hibernate:
+                dialect: org.hibernate.dialect.MySQL5Dialect

@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: api-carros
+  labels:
+    app: api-carros
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: api-carros
+  template:
+    metadata:
+      labels:
+        app: api-carros
+    spec:
+      containers:
+        - name: api-carros
+          image: kalatunga/api-carros:1
+          imagePullPolicy: Never
+          ports:
+            - containerPort: 8088
