@@ -36,3 +36,7 @@ spec:
                 configMapKeyRef:
                   name: mysql-configmap
                   key: database_password
+      volumes:
+        - name: mysql-persistence-storage
+          persistentVolumeClaim:
+            claimName: mysql-pv-claim
