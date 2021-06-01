@@ -17,7 +17,7 @@ spec:
       containers:
         - name: api-carros
           image: kalatunga/api-carros:1
-          imagePullPolicy: Never
+          imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 8088
           env:
