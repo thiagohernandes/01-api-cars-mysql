@@ -21,11 +21,11 @@ spec:
             - containerPort: 3306
           env:
             - name: MYSQL_ROOT_PASSWORD
-              value: '123456'
+              value: "123456"
             - name: MYSQL_DATABASE
-              value: 'dbcarros'
+              value: "dbcarros"
             - name: MYSQL_PASSWORD
-              value: '123456'
+              value: "123456"
           volumeMounts:
             - name: mysql-data
               mountPath: /var/lib/mysql

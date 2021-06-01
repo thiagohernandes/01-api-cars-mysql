@@ -4,5 +4,5 @@ metadata:
   name: mysql-configmap
 data:
   database_url: jdbc:mysql://db-mysql:3306/dbcarros?createDatabaseIfNotExist=true&autoReconnect=true&useSSL=false
-  database_user: 'root'
-  database_password: '123456'
+  database_user: "root"
+  database_password: "123456"
