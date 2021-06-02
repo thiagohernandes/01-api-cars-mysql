@@ -21,17 +21,17 @@ spec:
           ports:
             - containerPort: 8088
           env:
-            - name: MYSQL_URL
+            - name: DB_URL
               valueFrom:
                 configMapKeyRef:
                   name: mysql-configmap
                   key: database_url
-            - name: MSQL_USER
+            - name: DB_USER
               valueFrom:
                 configMapKeyRef:
                   name: mysql-configmap
                   key: database_user
-            - name: MYSQL_PASSWORD
+            - name: DB_PASSWORD
               valueFrom:
                 configMapKeyRef:
                   name: mysql-configmap
