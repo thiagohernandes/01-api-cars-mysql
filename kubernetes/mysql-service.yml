@@ -9,5 +9,7 @@ spec:
     - port: 3306
       targetPort: 3306
       protocol: TCP
+      nodePort: 30003
+  type: NodePort
   selector:
     app: db-mysql
