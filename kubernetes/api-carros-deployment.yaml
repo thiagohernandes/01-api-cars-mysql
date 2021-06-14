@@ -18,6 +18,17 @@ spec:
         - name: api-carros
           image: kalatunga/api-carros:1
           imagePullPolicy: IfNotPresent
+          command:
+            - /bin/bash
+            - -ec
+            - sleep 30; touch /tmp/ready; sleep 600
+          readinessProbe:
+            exec:
+              command:
+                - cat
+                - /tmp/ready
+            initialDelaySeconds: 10
+            periodSeconds: 5
           ports:
             - containerPort: 8088
           env:
