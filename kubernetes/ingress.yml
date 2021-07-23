@@ -21,3 +21,6 @@ spec:
                 name: api-compras
                 port:
                   number: 8089
+# ajust /etc/hosts bellow:
+# 192.168.49.2	carros.com
+# where: 192.168.49.2 is minikube IP
