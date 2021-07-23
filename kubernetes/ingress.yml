@@ -1,0 +1,23 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: ingress-wildcard-host
+spec:
+  rules:
+    - host: "carros.com"
+      http:
+        paths:
+          - pathType: Prefix
+            path: "/api/carros"
+            backend:
+              service:
+                name: api-carros
+                port:
+                  number: 8088
+          - pathType: Prefix
+            path: "/api/compra"
+            backend:
+              service:
+                name: api-compras
+                port:
+                  number: 8089
